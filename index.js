@@ -16,7 +16,7 @@ var click_state = false
 touch_pad.addEventListener('touchstart', input.emit.bind(input, 'touchstart'))
 touch_pad.addEventListener('touchend', input.emit.bind(input, 'touchend'))
 
-touch_pad.addEventListener('click', trigger_touch)
+//touch_pad.addEventListener('click', trigger_touch)
 
 function write_output(data) {
   output_element.innerHTML = output_element.innerHTML + data
