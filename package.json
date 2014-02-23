@@ -1,0 +1,23 @@
+{
+  "name": "touch-morse-example",
+  "version": "0.0.0",
+  "description": "translate taps into morse code",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "browserify -e index.js -dg false -o js/bundle.js"
+  },
+  "keywords": [
+    "tap",
+    "morse",
+    "example"
+  ],
+  "author": "jesse keane",
+  "license": "MIT",
+  "dependencies": {
+    "remorse": "0.0.0",
+    "chronotrigger": "0.0.0",
+    "through": "~2.3.4",
+    "morse-decode-stream": "0.0.1"
+  }
+}
