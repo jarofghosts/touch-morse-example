@@ -16,22 +16,14 @@ var click_state = false
 touch_pad.addEventListener('touchstart', trigger_start)
 touch_pad.addEventListener('touchend', trigger_end)
 
-touch_pad.addEventListener('click', trigger_touch)
-
 function write_output(data) {
   output_element.innerHTML = output_element.innerHTML + data
 }
 
-chronotrigger(input, 'touchstart', 'touchend', 1750)
-  .pipe(remorse(250, 100))
-  .pipe(demorse(250))
+chronotrigger(input, 'touchstart', 'touchend', 1050)
+  .pipe(remorse(150, 75))
+  .pipe(demorse(150))
   .pipe(output)
-
-function trigger_touch() {
-  input.emit(click_state ? 'touchend' : 'touchstart')
-  console.dir(click_state ? 'touchend' : 'touchstart')
-  click_state = !click_state
-}
 
 function trigger_start(ev) {
   ev.preventDefault()
