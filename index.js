@@ -11,8 +11,6 @@ var output_element = document.getElementById('output'),
 var output = through(write_output),
     input = new EE()
 
-var click_state = false
-
 touch_pad.addEventListener('touchstart', trigger_start)
 touch_pad.addEventListener('touchend', trigger_end)
 
